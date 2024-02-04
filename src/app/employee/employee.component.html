@@ -1,0 +1,26 @@
+<p>employee works!</p>
+
+<div class="container">
+<form [formGroup]="employeeForm" (ngSubmit)="update()">
+  <div class="form-group">
+    <label >Firstname</label>
+    <input class="form-control" formControlName="firstName">
+  </div>
+  <div class="form-group">
+    <label >Lastname</label>
+    <input class="form-control" formControlName="lastName">
+  </div>
+  <div class="form-group">
+    <label >Department</label>
+    <input class="form-control" formControlName="department">
+  </div>
+  <div class="form-group" formGroupName="address">
+    <label><b>Address</b></label><br>
+    City: <input class="form-control" formControlName="street">
+    State: <input class="form-control" formControlName="city">
+    Zip: <input class="form-control" formControlName="zip">
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</div>
+<p>Form Status: {{employeeForm.status}}</p>

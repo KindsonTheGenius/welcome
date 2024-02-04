@@ -1,0 +1,9 @@
+<h3> Vote by {{voter}}</h3>
+<button (click)="vote(true)"
+        [disabled]="didVote"
+        class="btn btn-outline-success">Yes</button>
+
+<button (click)="vote(false)"
+        [disabled]="didVote"
+        class="btn btn-outline-danger">No</button>
+<br>

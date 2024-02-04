@@ -1,0 +1,11 @@
+
+<div class="container">
+  <h2>Do you think climate change is a crisis?</h2>
+  <h3>Yes: {{yes}}, No {{no}}</h3>
+
+  <hr>
+  <app-voter *ngFor="let respondent of respondents "
+   [voter]="respondent"
+  (voted)="onVoted($event)">
+</app-voter>
+</div>

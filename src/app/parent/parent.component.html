@@ -1,0 +1,10 @@
+<p>parent works!</p>
+
+<div class="container">
+  <h2>Number of books sent {{books.length}}</h2>
+  <hr>
+  <app-child *ngFor="let book of books"
+  [recievedBook]="book"
+  [myDadName]="papa">
+  </app-child>
+</div>

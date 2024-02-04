@@ -1,0 +1,48 @@
+<p>student works!</p>
+{{firsname}}
+<p [ngClass]="{'red':false, 'green':true}">
+  Sure you understand Angular Directives!
+</p>
+
+<h1>Example of Property Binding</h1>
+<img [src]="imgUrl">
+<button [disabled]="isDisabled">You Cannot Click here</button>
+
+<style>
+  .red{color: #ff0000
+  }
+  .green{color: green}
+</style>
+
+<p>Today's date is {{myDate | date:'fullDate'}}</p>
+<p>Today's date is {{myDate | date:'shortDate'}}</p>
+<p>Today's date is {{myDate | date:'MM/dd/yyyy'}}</p>
+<p>Today's date is {{myDate | date:'dd-MMM-yyyy'}}</p>
+
+<div style = "width:80%;">
+  <div style = "width:45%;float:left;border:solid 1px darkred;">
+    <h1>Uppercase Pipe</h1>
+    <b>{{title | uppercase}}</b><br/>
+    <h1>Lowercase Pipe</h1>
+    <b>{{title | lowercase}}</b>
+    <h1>Currency Pipe</h1>
+    <b>{{7656.65 | currency:"USD"}}</b><br/>
+    <b>{{5475.09 | currency:"USD":true}}</b> //True is used to show the sign of the currency.
+    <h1>Date pipes</h1>
+    <b>{{todaysdate | date:'fullDate' | uppercase}}</b><br/>
+    <b>{{todaysdate | date:'shortTime'}}</b>
+    <h1>Decimal Pipe</h1>
+    <b>{{ 345.876876 | number: '3.4-4' }}</b> // 3 is for main integer, 4 -4 are for integers displayed.
+  </div>
+  <div style = "width:45%;float:left;border:solid 1px darkblue;">
+    <h1>Percent Pipe</h1>
+    <b>{{0.98754 | percent}}</b>
+    <h1>Json Pipe</h1>
+    <b>{{ jsondata | json }}</b>
+    <h1>Slice Pipe</h1>
+    <b>{{months | slice:3:8}}</b>
+    // here 3 and 8 are the start and the end indexes
+  </div>
+</div>
+
+<p>Transforming 2 to power 5: {{2 | exponent: 5}}</p>

@@ -1,0 +1,14 @@
+<p>first works!</p>
+
+<form #personForm="ngForm">
+  Firstname: <input type="text" name="name" [(ngModel)]="person.firstname"><br>
+  Lastname: <input type="text" name="latname" [(ngModel)]="person.lastname"><br>
+  Email......: <input type="text" name="email" [(ngModel)]="person.email"><br>
+  Address: <textarea name="address" [(ngModel)]="person.address"></textarea>
+  <br>
+  <button (click)="send()">Submit</button>
+</form>
+<hr>
+<h4>Outputs</h4>
+<p>{{person | json}}</p>
+<p>{{personForm.value | json}}</p>
